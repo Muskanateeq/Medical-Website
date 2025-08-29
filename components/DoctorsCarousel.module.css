@@ -1,0 +1,142 @@
+/* components/DoctorsCarousel.module.css */
+
+.mainheading h2 {
+    font-size: 2.5rem; /* Larger font size */
+    color: #0070f3; /* Base color */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #0070f3, #ff5733); /* Gradient effect */
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* Vendor prefix for Safari */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+    color: transparent; /* Fallback color for browsers that don't support background-clip */
+}
+
+.carouselContainer {
+    text-align: center;
+    margin-left: 50px;
+    position: relative;
+    padding-top: 50px;
+  }
+  .doctorCard {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .doctorCard h3 {
+    color: #005bb5;
+    font-weight: bolder;
+  }
+
+  .doctorCard p {
+    color: #ff5733
+  }
+
+  
+  .doctorImage {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .doctorCard:hover .doctorImage {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .doctorCard:hover .overlay {
+    display: flex;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+    color: white;
+  }
+  
+  .icons i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .icons i:hover {
+    color: #ddd;
+  }
+  
+  .arrows {
+    margin-top: 20px;
+  }
+  
+  .arrows button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .arrows button:hover {
+    background-color: #005bb5;
+  }
+
+  
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .carouselContainer {
+        padding: 10px; /* Less padding for mobile */
+    }
+
+    .doctorCard {
+        max-width: 90%; /* Increase width on smaller screens */
+    }
+
+    .arrows button {
+        padding: 8px 16px; /* Smaller padding for arrows */
+        font-size: 16px; /* Smaller font size for arrows */
+    }
+}
+
+@media (max-width: 480px) {
+    .mainheading h2 {
+        font-size: 2rem; /* Smaller heading font size for mobile */
+    }
+
+    .doctorCard h3 {
+        font-size: 1.5rem; /* Smaller font size for doctor names */
+    }
+
+    .doctorCard p {
+        font-size: 1rem; /* Smaller font size for specialties */
+    }
+
+    .icons i {
+        font-size: 20px; /* Smaller icon size for mobile */
+    }
+}
+

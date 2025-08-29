@@ -1,0 +1,243 @@
+/* components/MedicalExperience.module.css */
+.section {
+  padding: 80px 20px;
+  background-color: #f9fbfd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contentColumn {
+  padding: 0 15px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-size: 3.2rem; /* Larger heading size */
+  font-weight: 800; /* Bolder font weight */
+  line-height: 1.15;
+  color: #1a365d;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: #0d6efd;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #0d6efd, #0dcaf0);
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2c3e50;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.subheading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paragraph {
+  font-size: 0.85rem; /* Smaller paragraph text */
+  line-height: 1.8;
+  color: #495057;
+  max-width: 95%;
+}
+
+.testimonial {
+  background: white;
+  border-left: 4px solid #0d6efd;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  max-width: 100%;
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 5rem;
+  color: #0d6efd;
+  opacity: 0.2;
+  font-family: serif;
+  line-height: 1;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.authorName {
+  font-weight: 700;
+  color: #1a365d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.authorTitle {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.aboutButton {
+  background: transparent;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+  padding: 12px 35px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.aboutButton:hover {
+  background: #0d6efd;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+.imageColumn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border: 10px solid white;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+  
+  .subheading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .imageContainer {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 15px;
+  }
+  
+  .heading {
+    font-size: 2.4rem;
+  }
+  
+  .subheading {
+    font-size: 1.3rem;
+  }
+  
+  .paragraph {
+    max-width: 100%;
+  }
+  
+  .testimonial {
+    max-width: 100%;
+  }
+  
+  .imageContainer {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .subheading {
+    font-size: 1.1rem;
+  }
+  
+  .aboutButton {
+    width: 100%;
+    text-align: center;
+  }
+}

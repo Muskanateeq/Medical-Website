@@ -1,0 +1,177 @@
+/* components/ContactForm.module.css */
+.section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.content {
+  flex: 1;
+  padding-top: 3%;
+  padding-left: 8%;
+  padding-right: 5%;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.tagline {
+  color: #d97706;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.halfWidth {
+  flex: 1;
+}
+
+.label {
+    display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.80rem;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  background-color: #f7fafc;
+  color: #4a5568;
+}
+
+.input::placeholder {
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4299e1;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.75rem 1.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.submitButton:hover {
+  background-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    gap: 2rem;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .imageContainer {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}

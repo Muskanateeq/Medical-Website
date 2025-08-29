@@ -1,0 +1,101 @@
+
+.footer {
+    background-color: silver;
+    padding: 20px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .footer h2 {
+    color: #1e3a8a;
+    font-weight: bolder;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: black;
+  }
+
+  .left {
+    width: 50%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .right {
+    text-align: right;
+    width: 40%;
+  }
+  
+  .pipe {
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 20px;
+    height: auto;
+  }
+  
+  .right h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .right p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: black;
+  }
+
+  /* Responsive styles */
+@media (min-width: 768px) {
+  .footerContent {
+      flex-direction: row; /* Side by side on larger screens */
+      justify-content: space-between;
+  }
+
+  .left {
+      width: 50%; /* Limit width of left section */
+      text-align: left; /* Align text to the left */
+  }
+
+  .right {
+      text-align: right; /* Right align on larger screens */
+      width: 40%; /* Limit width of right section */
+  }
+
+  .pipe {
+      display: block; /* Show vertical divider on larger screens */
+      width: 1px;
+      background-color: #ddd;
+      height: auto;
+      margin: 0 20px; /* Space around the divider */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer h2 {
+      font-size: 1.5rem; /* Smaller heading font size for mobile */
+  }
+
+  .right h3 {
+      font-size: 1.2rem; /* Smaller heading font size for right section */
+  }
+
+  .right p {
+      font-size: 12px; /* Smaller paragraph font size for mobile */
+  }
+}
+  

@@ -1,0 +1,103 @@
+/* Wrapper for the text and slider */
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Text container for the left side */
+.textContainer {
+  max-width: 300px;
+  text-align: left;
+}
+
+/* Styling for the heading */
+.sliderHeading {
+  font-size: 2.5rem; /* Larger font size */
+  color: #0070f3; /* Base color */
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #4596f3, #ff5733); /* Gradient effect */
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* Vendor prefix for Safari */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+  color: transparent; /* Fallback color for browsers that don't support background-clip */
+}
+
+/* Styling for the paragraph */
+.sliderParagraph {
+  font-size: 16px;
+  color: #34495e; /* Slightly lighter shade for contrast */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+/* Slider styles */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px 4px rgba(0.1, 0, 0, 0.1);
+}
+
+.sliderImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Dots for slider navigation */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #3498db;
+} 
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .sliderWrapper {
+    flex-direction: row; /* Side by side on larger screens */
+  }
+
+  .textContainer {
+    max-width: 300px; /* Keep the text container width */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .slider {
+    max-width: 600px; /* Fixed width for larger screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderHeading {
+    font-size: 1.8rem; /* Smaller heading font size */
+  }
+
+  .sliderParagraph {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+}

@@ -1,0 +1,653 @@
+
+/* ContactForm.module.css */
+.bookingPage {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.heroSection {
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.confirmationMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.confirmationMessage p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.confirmationMessage strong {
+  color: #0f5132;
+  font-weight: 600;
+}
+
+/* Add these styles to your existing .module.css file */
+.fullScreenConfirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  background-color: #f0f9ff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.confirmationContent {
+  max-width: 600px;
+  width: 100%;
+}
+
+.confirmationContent h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.confirmationDetails {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.confirmationDetails p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #4a5568;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 15px;
+}
+
+.confirmationDetails p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.confirmationDetails strong {
+  color: #2d3748;
+  font-weight: 600;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.confirmationMessage {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.confirmationMessage strong {
+  color: #3182ce;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.timerCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #4299e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.timerCircle::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #3182ce;
+  animation: spin 1s linear infinite;
+}
+
+.timerText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3182ce;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.returnButton {
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.returnButton:hover {
+  background: #3182ce;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fullScreenConfirmation {
+    min-height: 400px;
+    padding: 20px;
+  }
+  
+  .confirmationContent h2 {
+    font-size: 1.6rem;
+  }
+  
+  .confirmationDetails {
+    padding: 15px;
+  }
+  
+  .confirmationDetails p {
+    font-size: 1rem;
+  }
+  
+  .timerCircle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .timerText {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 992px) {
+  .contentWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Form Section */
+.formSection {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.formHeader {
+  margin-bottom: 30px;
+}
+
+.formTagline {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+
+.formTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #0d6efd, #0dcaf0);
+  border-radius: 2px;
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formLabel {
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #495057;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 0 2px rgba(77, 144, 254, 0.2);
+  background-color: white;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #adb5bd;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.formSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.formSelect:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: #4d90fe;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background: #4d90fe;
+}
+
+/* Info Section */
+.infoSection {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.infoParagraph {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 576px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactCard {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background: #f0f7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactIcon {
+  color: #007bff;
+  width: 22px;
+  height: 22px;
+}
+
+.contactDetails {
+  flex: 1;
+}
+
+.contactTitle {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.contactText {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contactLink {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  display: block;
+  margin: 3px 0;
+}
+
+.contactLink:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.subscribeBanner {
+  background: #2c3e50;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribeBanner:hover {
+  background: #1a252f;
+}
+
+.subscribeContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.subscribeIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.fullScreenConfirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  background-color: #f0f9ff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.confirmationContent {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fullScreenConfirmation {
+    min-height: 400px;
+    padding: 20px;
+  }
+  
+  .confirmationContent h2 {
+    font-size: 1.6rem;
+  }
+  
+  .confirmationDetails {
+    padding: 15px;
+  }
+  
+  .confirmationDetails p {
+    font-size: 1rem;
+  }
+  
+  .timerCircle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .timerText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullScreenConfirmation {
+    min-height: 300px;
+    padding: 15px;
+  }
+  
+  .confirmationContent h2 {
+    font-size: 1.4rem;
+  }
+  
+  .confirmationMessage {
+    font-size: 1rem;
+  }
+  
+  .returnButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .timerCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .timerText {
+    font-size: 1.1rem;
+  }
+}
+
+/* Add this new media query for very small screens */
+@media (max-width: 360px) {
+  .confirmationContent h2 {
+    font-size: 1.3rem;
+  }
+  
+  .confirmationDetails p {
+    font-size: 0.9rem;
+  }
+  
+  .timerCircle {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    height: 300px;
+  }
+  
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+  
+  .heroContent p {
+    font-size: 1rem;
+  }
+  
+  .formTitle {
+  font-size: 2.1rem;
+  font-weight: 800; /* Increased font weight for boldness */
+  color: #1a365d; /* Darker blue for better contrast */
+  margin-bottom: 0;
+  letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  }
+  
+  .contentWrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formSection {
+    padding: 20px 15px;
+  }
+  
+  .contactCard {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .contactDetails {
+    text-align: center;
+  }
+  
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+  
+  .heroContent p {
+    font-size: 0.9rem;
+  }
+}

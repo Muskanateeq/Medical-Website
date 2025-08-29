@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 40px;
+    color: white;
+    /* background-image: url('/background-image.jpg'); */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .leftSection {
+    max-width: 50%;
+  }
+  
+  .leftSection h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .leftSection p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .signature {
+    width: 150px;
+  }
+  
+  .rightSection {
+    max-width: 40%;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .progressBar {
+    background-color: #ddd;
+    border-radius: 20px;
+    height: 10px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .progress {
+    background-color: #3498db;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.3s;
+  }
+  
+  .skill span {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .leftSection, .rightSection {
+      max-width: 100%;
+    }
+  
+    .rightSection {
+      margin-top: 20px;
+    }
+  }
+  

@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    height: 70vh; 
+    
+  }
+  
+  /* Style for the left-side text container */
+  .textContainer {
+    flex: 1;
+    margin-right: 30px; /* Space between image and text */
+  }
+  
+  /* Hero title styling */
+  .hero {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Customize color as needed */
+  }
+  
+  /* Paragraph styling */
+  .main {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 30px;
+  }
+  
+  /* Style for the image */
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Image aligned to the right */
+    height: 400px;
+  }
+  
+  /* Button styling */
+.ctaButton {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px; /* Space above the button */
+    background-color: #0070f3; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .ctaButton:hover {
+    background-color: #005bb5; /* Darker background on hover */
+  }
+
+
+/* Centered box container */
+.boxContainer {
+    display: flex;
+    justify-content: center; /* Center the boxes */
+    margin-top: 0; /* Space above the boxes */
+  }
+  
+  /* Style for individual boxes */
+  .box {
+    background-color: #1e3a8a; /* Light background for visibility */
+    border: 1px solid #ddd; /* Light border */
+    padding: 20px;
+    margin: 0 10px; /* Space between boxes */
+    text-align: center; /* Center text inside the boxes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1; /* Make boxes grow equally */
+    height: 100px;
+    max-width: 200px;
+  }
+

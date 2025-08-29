@@ -1,0 +1,126 @@
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.logo .highlight {
+  color: #60a5fa;
+}
+
+/* Navbar container styling */
+.header {
+  background-color: #1e3a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding: 0.70rem;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.header li {
+  list-style: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header a:hover {
+  color: #60a5fa;
+  transform: scale(1.1);
+}
+
+.header button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.header button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Menu Icon Styling (Hamburger and Close) */
+.menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 15;
+}
+
+/* Navbar items */
+.navLinks {
+  display: flex;
+  flex-direction: row; /* Default horizontal layout */
+}
+
+/* Responsive styles for screens with max-width 1024px */
+@media (max-width: 1024px) {
+  .menuIcon {
+    display: block;
+  }
+  
+  .navLinks {
+    display: none;
+    flex-direction: column; /* Switch to column layout for toggled menu */
+    align-items: center;
+    background-color: #1e3a8a;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .showMenu {
+    display: flex; /* Show menu in column layout when toggled */
+  }
+  
+  .navLinks li {
+    margin: 1rem 0;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .header li {
+    margin: 0.5rem 0;
+  }
+
+  .header a {
+    margin: 0 0.5rem;
+  }
+
+  .header button {
+    margin: 0.5rem 0;
+  }
+}
+
+

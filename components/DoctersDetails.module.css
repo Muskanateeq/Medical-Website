@@ -1,0 +1,161 @@
+/* Main container */
+.container {
+  background-color: #ffffff;
+  padding: 64px 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* First row with 3 doctors */
+.firstRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+/* Second row with 2 doctors */
+.secondRow {
+  width: 100%;
+}
+
+.secondRowWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Doctor card */
+.doctorCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image container */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 256px;
+}
+
+.doctorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Social icons */
+.socialIcons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.socialIcon {
+  background-color: #ffffff;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  transition: background-color 0.3s;
+}
+
+.socialIcon:hover {
+  background-color: #f0f0f0;
+}
+
+/* Specialty icon */
+.specialtyIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  background-color: #0070f3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Doctor info */
+.doctorInfo {
+  padding: 24px;
+}
+
+.specialty {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.doctorName {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Biography link */
+.biographyLink {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 16px;
+}
+
+.biographyLink a {
+  color: #0070f3;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.biographyLink a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .firstRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .secondRowWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .doctorName {
+    font-size: 20px;
+  }
+
+  .specialty {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
